@@ -28,10 +28,10 @@ def main():
 
 # ------------------------------------------------------------------------------
 # DOne: 2.          With your instructor, READ THE INSTRUCTIONS in
-# TODO (continued)  in file  m0_INSTRUCTIONS.txt, asking questions as needed.
+# DONE (continued)  in file  m0_INSTRUCTIONS.txt, asking questions as needed.
 #
-# TODO (continued): Then implement a class called   Point that has NO METHODS
-# TODO (continued)  yet, just the lines that start the definition of any class:
+# DONE (continued): Then implement a class called   Point that has NO METHODS
+# Done (continued)  yet, just the lines that start the definition of any class:
 #
 #      class NAME_OF_CLASS(object):
 #          """ Brief description of what objects of the class 'are'."""
@@ -92,18 +92,16 @@ class Point(object):
         distance2 = math.sqrt(((p2.y - self.y) ** 2 + ((p2.x - self.x) ** 2)))
         distance3 = math.sqrt(((p3.y - self.y) ** 2 + ((p3.x - self.x) ** 2)))
         if distance2 < distance3:
-            return p2
-        else:
             return p3
+        else:
+            return p2
 
     def halfway_to(self, p2):
-        p5 = p2.x - self.x
-        p6 = p2.y - self.y
-        if p5 < 0:
-            p5 = p5 * -1
-        if p6 < 0:
-            p6 = p6 * -1
-        return Point(p5, p6)
+        #p4 = p2.x - self.x
+        #p5 = p2.y - self.y
+        p4 = (self.x + p2.x) / 2
+        p5 = (self.y + p2.y) / 2
+        return Point(p4, p5)
 
 
 
@@ -515,7 +513,7 @@ def run_test_move_by():
             print('** in fact, it returned:', check_has_no_return)
         """
     # --------------------------------------------------------------------------
-    # TODO: 7.  Follow the same instructions as in _TODO_ 3 above,
+    # DONE: 7.  Follow the same instructions as in _TODO_ 3 above,
     #           but for the  move_by  method specified above.
     # --------------------------------------------------------------------------
     print()
@@ -743,7 +741,7 @@ def run_test_get_distance_from():
         print('Actual   p2 to p4:', p2.get_distance_from(p4))
     """
     # --------------------------------------------------------------------------
-    # TODO: 9.  Follow the same instructions as in _TODO_ 3 above,
+    # DONE: 9.  Follow the same instructions as in _TODO_ 3 above,
     #    but for the  get_distance_from  method specified above.
     # --------------------------------------------------------------------------
     print()
@@ -838,7 +836,7 @@ def run_test_get_distance_from_start():
 
 
     # --------------------------------------------------------------------------
-    # TODO: 10.  Follow the same instructions as in _TODO_ 3 above,
+    # DONE: 10.  Follow the same instructions as in _TODO_ 3 above,
     #    but for the  get_distance_from_START  method specified above.
     # --------------------------------------------------------------------------
     print()
@@ -921,7 +919,7 @@ def run_test_get_distance_traveled():
         print('Actual:', p4.get_distance_traveled())
     """
     # --------------------------------------------------------------------------
-    # TODO: 11.  Follow the same instructions as in _TODO_ 3 above,
+    # DONE: 11.  Follow the same instructions as in _TODO_ 3 above,
     #    but for the  get_distance_traveled  method specified above.
     # --------------------------------------------------------------------------
     print()
@@ -1006,7 +1004,7 @@ def run_test_closer_to():
         print('Actual:  ', p1.closer_to(p4, p5) is p5)
     """
     # --------------------------------------------------------------------------
-    # TODO: 12.  Follow the same instructions as in TO-DO 3 above,
+    # DONE: 12.  Follow the same instructions as in TO-DO 3 above,
     #    but for the  closer_to  method specified above.
     # --------------------------------------------------------------------------
     print()
@@ -1089,7 +1087,7 @@ def run_test_halfway_to():
 
     """
     # --------------------------------------------------------------------------
-    # TODO: 13.  Follow the same instructions as in TO-DO 3 above,
+    # DOne: 13.  Follow the same instructions as in TO-DO 3 above,
     #    but for the  halfway_to  method specified above.
     # --------------------------------------------------------------------------
     print()
